@@ -69,6 +69,12 @@ def ura_to_ala():
     url = f'https://alaport.com/Home/searchFlights?flightLeg=ARR&date={date}&destination={destination}&airline=FLY%20ARYSTAN&requestRawUrl=%2Fru-RU%2Fflights-ru%2Farrival-flights-ru'
     raspars_data_alaport(url)
 
+def ala_to_ura():
+    date = '2024-06-30'
+    destination = 'ОРАЛ'
+    url = f'https://alaport.com/Home/searchFlights?flightLeg=DEP&date={date}&destination={destination}&airline=FLY%20ARYSTAN&requestRawUrl=%2Fru-RU%2Fflights-ru%2Fdeparture-flights-ru'
+    raspars_data_alaport(url)
+
 
 
 
@@ -79,5 +85,6 @@ def ura_to_ala():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     ura_to_ala()
+    ala_to_ura()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
