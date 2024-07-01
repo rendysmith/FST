@@ -62,24 +62,17 @@ def raspars_data_alaport(url):
         print(txt)
 
 
-
 def ura_to_ala():
-    date = '2024-06-29'
+    date = '2024-07-12'
     destination = 'ОРАЛ'
     url = f'https://alaport.com/Home/searchFlights?flightLeg=ARR&date={date}&destination={destination}&airline=FLY%20ARYSTAN&requestRawUrl=%2Fru-RU%2Fflights-ru%2Farrival-flights-ru'
     raspars_data_alaport(url)
 
 def ala_to_ura():
-    date = '2024-06-30'
+    date = '2024-07-23'
     destination = 'ОРАЛ'
     url = f'https://alaport.com/Home/searchFlights?flightLeg=DEP&date={date}&destination={destination}&airline=FLY%20ARYSTAN&requestRawUrl=%2Fru-RU%2Fflights-ru%2Fdeparture-flights-ru'
     raspars_data_alaport(url)
-
-
-
-
-
-
 
 
 # Press the green button in the gutter to run the script.
