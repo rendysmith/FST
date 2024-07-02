@@ -8,7 +8,7 @@ import html
 from datetime import datetime
 import pytz
 
-flightNs = ['7166', '7167', '1722', '1721', '5288']
+flightNs = ['7166', '7167', '1722', '1721']
 
 
 def time_until(target_datetime_str, timezone_str='Asia/Almaty'):
