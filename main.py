@@ -136,27 +136,44 @@ def raspars_data_uraport(url):
 
             print(txt)
 
-def ura_to_ala_ala():
+def alaport():
+    print('\nВылет из Уральска в Алматы')
     date = '2024-07-12'
     destination = 'ОРАЛ'
     url = f'https://alaport.com/Home/searchFlights?flightLeg=ARR&date={date}&destination={destination}&airline=FLY%20ARYSTAN&requestRawUrl=%2Fru-RU%2Fflights-ru%2Farrival-flights-ru'
     raspars_data_alaport(url)
 
-def ala_to_ura_ala():
+    print('\nВылет из Алматы в Уральск')
     date = '2024-07-23'
     destination = 'ОРАЛ'
     url = f'https://alaport.com/Home/searchFlights?flightLeg=DEP&date={date}&destination={destination}&airline=FLY%20ARYSTAN&requestRawUrl=%2Fru-RU%2Fflights-ru%2Fdeparture-flights-ru'
     raspars_data_alaport(url)
 
-def ura_to_ala_ura():
+def uraport():
+    print('\nВылет из Уральска в Алматы')
     urls = ['https://ura.aero/ru/board/', 'https://ura.aero/ru/board/?date=tomorrow']
     for url in urls:
         raspars_data_uraport(url)
 
-def ala_to_ura_ura():
+    print('\nВылет из Алматы в Уральск')
     urls = ['https://ura.aero/ru/board/?type=arr', 'https://ura.aero/ru/board/?type=arr&date=tomorrow']
     for url in urls:
         raspars_data_uraport(url)
+
+
+def yaport():
+    print('Из Алматы в Дубай 13.07')
+    url = 'https://rasp.yandex.kz/search/plane/?fromId=c22177&fromName=%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&toId=c11499&toName=%D0%94%D1%83%D0%B1%D0%B0%D0%B9&when=13+%D0%B8%D1%8E%D0%BB%D1%8F'
+
+    print('Из Дубай в Алматы 23.07')
+    url = 'https://rasp.yandex.kz/search/plane/?fromId=c11499&fromName=%D0%94%D1%83%D0%B1%D0%B0%D0%B9&toId=c22177&toName=%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&when=23+%D0%B8%D1%8E%D0%BB%D1%8F'
+
+
+    url = 'https://travel.yandex.ru/avia/flights/KC-7166/?lang=ru&when=2024-07-02&from=URA'
+
+
+def aeroport():
+    urls = ['https://aeroport.kz/tablo.php?code=ala', 'https://aeroport.kz/tablo.php?code=ura']
 
 
 
@@ -167,9 +184,7 @@ def ala_to_ura_ura():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    ura_to_ala_ala()
-    ala_to_ura_ala()
-    ura_to_ala_ura()
-    ala_to_ura_ura()
+    alaport()
+    uraport()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
