@@ -1,16 +1,16 @@
 FROM python:3.10
 
-# Установка необходимых пакетов и локалей
-RUN apt-get update
+RUN apt-get update -y
+RUN apt-get install -y python3-pip
+RUN mkdir /app/
 
-# Установка зависимостей
-COPY requirements.txt /app/
-WORKDIR /app
-RUN pip install -r requirements.txt
+COPY ./requirements.txt /app/requirements.txt
+RUN pip install -r /app/requirements.txt
 
-# Копирование остального кода приложения
-COPY . /app
+COPY . /app/
+WORKDIR /app/
 
-RUN chmod +x update_cont.sh
-# Запуск приложения
-CMD ["python", "main.py"]
+ENV PRJPATH /app/
+
+# Запуск основного файла
+CMD ["python", "-um", "main"]
