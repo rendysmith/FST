@@ -1,4 +1,6 @@
 # This is a sample Python script.
+import os.path
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -15,7 +17,9 @@ import chardet
 flightNs = ['7166', '7167', '1722', '1721']
 #flightNs = ['7168', '882']
 
-env_vars = dotenv_values(".env")
+abspath = os.path.dirname(os.path.abspath(__file__))
+env_path = os.path.join(abspath, '.env')
+env_vars = dotenv_values(env_path)
 token = env_vars["TOKEN"]
 channel_name = env_vars["CHANNEL_NAME"]
 
