@@ -115,13 +115,19 @@ def raspars_data_alaport(url):
             gate = flight['gate'] #Терминал посадки/высадки
             carousel = flight['carousel'] #Багажная лента
 
+            if 'ARR' in url:
+                st = 'прилета'
+
+            elif "DEP" in url:
+                st = 'вылета'
+
             txt = (f'🌐Аэропорт ALA\n'
                    f'🛫Вылет из {path_from} в {path_to}\n'
                    f'✈️Рейс: {airlineIata}-{flightNumber}\n'
-                   f'💺Время вылета _по расп.: {stad}\n'
-                   f'🛫Время вылета _по факту: {etad}\n'
-                   f'🕒До вылета: {time_left}\n'
-                   f'🛬Время прилета по факту: {atad}\n'
+                   f'💺Время {st} _по расп.: {stad}\n'
+                   f'🛫Время {st} _по факту: {etad}\n'
+                   f'🕒До {st}: {time_left}\n'
+                   f'🛬Время {st} по факту: {atad}\n'
                    f'📅Задержка рейса: {remark}\n'
                    f'🏢Терминал: {gate}\n'
                    f'🛄Багажная лента: {carousel}')
@@ -373,14 +379,6 @@ def aeroportkz():
 
     for url in urls:
         raspars_data_aerokz(url)
-
-
-
-
-
-
-
-
 
 
 # Press the green button in the gutter to run the script.
