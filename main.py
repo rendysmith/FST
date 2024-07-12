@@ -26,6 +26,7 @@ def get_dates():
 
 # Пример использования:
 today, tomorrow = get_dates()
+print(today, tomorrow)
 
 abspath = os.path.dirname(os.path.abspath(__file__))
 env_path = os.path.join(abspath, '.env')
@@ -131,7 +132,7 @@ def raspars_data_alaport(url):
             elif "DEP" in url:
                 st = 'вылета'
 
-            if not any(date in stad for date in dates):
+            if not any(date in stad for date in dates) and not any(date in [today, tomorrow] for date in dates):
                 continue
 
             txt = (f'🌐Аэропорт ALA\n'
@@ -189,7 +190,7 @@ def raspars_data_uraport(url):
             gate = ''
             carousel = ''
 
-            if not any(date in stad for date in dates):
+            if not any(date in stad for date in dates) and not any(date in [today, tomorrow] for date in dates):
                 continue
 
             txt = (f'🌐Аэропорт URA\n'
