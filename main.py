@@ -115,7 +115,7 @@ def raspars_data_alaport(url):
         path_to = flight['path']['destination']['destinationEn']
         airlineIata = flight['airlineIata']
         flightNumber = flight['flightNumber'] #Номер рейса
-        print(flightNumber, type(flightNumber))
+        #print(flightNumber, type(flightNumber))
 
         if any(flightN in flightNumber for flightN in flightNs):
             stad = flight['stad'] #Вылет по рассписанию
@@ -132,7 +132,8 @@ def raspars_data_alaport(url):
             elif "DEP" in url:
                 st = 'вылета'
 
-            if not any(date in stad for date in dates) and not any(date in [today, tomorrow] for date in dates):
+            if not any(date in [today, tomorrow] for date in dates):
+                print("continue")
                 continue
 
             txt = (f'🌐Аэропорт ALA\n'
@@ -190,7 +191,8 @@ def raspars_data_uraport(url):
             gate = ''
             carousel = ''
 
-            if not any(date in stad for date in dates) and not any(date in [today, tomorrow] for date in dates):
+            if not any(date in [today, tomorrow] for date in dates):
+                print("continue")
                 continue
 
             txt = (f'🌐Аэропорт URA\n'
