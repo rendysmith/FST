@@ -18,15 +18,15 @@ flightNs = ['7166', '7167', '1722', '1721']
 dates = ['12.07', '13.07', '23.07']
 #flightNs = ['7168', '882']
 
-
 def get_dates():
     today = datetime.now().strftime('%d.%m')
     tomorrow = (datetime.now() + timedelta(days=1)).strftime('%d.%m')
-    return today, tomorrow
+    day_after_tomorrow = (datetime.now() + timedelta(days=2)).strftime('%d.%m')
+    return today, tomorrow, day_after_tomorrow
 
 # Пример использования:
-today, tomorrow = get_dates()
-print(today, tomorrow)
+days = get_dates()
+print(days)
 
 abspath = os.path.dirname(os.path.abspath(__file__))
 env_path = os.path.join(abspath, '.env')
@@ -132,7 +132,7 @@ def raspars_data_alaport(url):
             elif "DEP" in url:
                 st = 'вылета'
 
-            if not any(date in [today, tomorrow] for date in dates):
+            if not any(date in days for date in dates):
                 print("continue")
                 continue
 
