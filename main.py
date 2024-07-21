@@ -379,10 +379,10 @@ def alaport():
 
 
 def uraport():
-    print('\nТабло URA: Вылет из Уральска в Алматы')
-    urls = ['https://ura.aero/ru/board/', 'https://ura.aero/ru/board/?date=tomorrow']
-    for url in urls:
-        raspars_data_uraport(url)
+    # print('\nТабло URA: Вылет из Уральска в Алматы')
+    # urls = ['https://ura.aero/ru/board/', 'https://ura.aero/ru/board/?date=tomorrow']
+    # for url in urls:
+    #     raspars_data_uraport(url)
 
     print('\nТабло URA: Вылет из Алматы в Уральск')
     urls = ['https://ura.aero/ru/board/?type=arr', 'https://ura.aero/ru/board/?type=arr&date=tomorrow']
