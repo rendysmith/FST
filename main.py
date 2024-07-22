@@ -365,8 +365,9 @@ def alaport():
     destination = 'ДУБАЙ'
     airline = "FLY DYBAI"
     url = f'https://alaport.com/Home/searchFlights?flightLeg=ARR&date={date}&destination={destination}&airline={airline}&requestRawUrl=%2Fru-RU%2Fflights-ru%2Farrival-flights-ru'
-    #url = 'https://alaport.com/Home/searchFlights?flightLeg=ARR&date=2024-07-23&destination=%D0%94%D0%A3%D0%91%D0%90%D0%99&airline=FLY%20DUBAI&requestRawUrl=%2Fru-RU%2Fflights-ru%2Farrival-flights-ru'
-    url = f'https://alaport.com/Home/searchFlights?flightLeg=ARR&date={date}&destination=%D0%94%D0%A3%D0%91%D0%90%D0%99&airline={airline}&requestRawUrl=%2Fru-RU%2Fflights-ru%2Farrival-flights-ru'
+    url = 'https://alaport.com/Home/searchFlights?flightLeg=ARR&date=2024-07-23&destination=%D0%94%D0%A3%D0%91%D0%90%D0%99&airline=FLY%20DUBAI&requestRawUrl=%2Fru-RU%2Fflights-ru%2Farrival-flights-ru'
+    url = 'https://alaport.com/Home/searchFlights?flightLeg=ARR&date=2024-07-23&destination=%D0%94%D0%A3%D0%91%D0%90%D0%99&airline=FLY%20DUBAI&requestRawUrl=%2Fru-RU%2Fflights-ru%2Farrival-flights-ru'
+    #url = f'https://alaport.com/Home/searchFlights?flightLeg=ARR&date={date}&destination=%D0%94%D0%A3%D0%91%D0%90%D0%99&airline={airline}&requestRawUrl=%2Fru-RU%2Fflights-ru%2Farrival-flights-ru'
     raspars_data_alaport(url)
 
     print('\nТабло ALA: Вылет из Алматы в Уральск')
